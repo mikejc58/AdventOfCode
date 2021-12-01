@@ -1,0 +1,14 @@
+2000 Lines read from Day1/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 - count the number of times a depth measurement increases
+
+depth increased 1393 times
+
+--------------------------------------------------------------------------------
+
+Part 2 - count the number of times the sum of measurements
+                        in sliding windows increases
+
+depth increased 1359 times
+
