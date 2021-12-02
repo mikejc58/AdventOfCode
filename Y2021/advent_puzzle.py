@@ -13,7 +13,7 @@ description = ("",       # part 1
 #   them up to be able to be executed in a batch with more puzzles.  You can ignore
 #   that.  
 
-def puzzle(input_file):
+def puzzle(input_file, part='both'):
     """run part1 and part2 of the puzzle
          parameters are the input file name, and a parameter that
          can be 1 to execute only Part1, 2 to execute only Part2 or 'both' to execute both parts
@@ -39,7 +39,7 @@ def puzzle(input_file):
 
 
 
-def puzzle_part1(depths):
+def puzzle_part1(lines):
     """run  part1 of puzzle"""
     pass
     

@@ -75,5 +75,17 @@ def read_input(file_name, prep_function=None):
             lines.append(line)
     return lines
 
+def split__command_number(line):
+    """split a line into a list with a command (str) and a number (int)"""
+    line = line.split()
+    line[1] = int(line[1])
+    return line
 
+def split__characters(line):
+    """split a line into a list of single characters"""
+    return list(line)
 
+def split__words(line):
+    """split a line into a list of words, removing punctuation"""
+    line = [word.rstrip(',;:.? ') for word in line.split()]
+    return line

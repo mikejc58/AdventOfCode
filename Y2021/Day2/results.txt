@@ -1,0 +1,11 @@
+1000 Lines read from Day2/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 - product of final horizontal position and final depth
+final horizontal position=1968, final depth=1063
+product=2091984
+--------------------------------------------------------------------------------
+
+Part 2 - 
+final horizontal position=1968, final depth=1060092, aim=1063
+product=2086261056
