@@ -27,14 +27,14 @@ def puzzle(input_file, part='both'):
     print('-'*80)
 
     if part == 1 or part == 'both':
-        print(f"\nPart 1 - {description[0]}")
+        print(f"\nPart 1 - {description[0]}\n")
         puzzle_part1(list(lines))
         
     if part == 'both':
         print('-'*80)
     
     if part == 2 or part == 'both':
-        print(f"\nPart 2 - {description[1]}")
+        print(f"\nPart 2 - {description[1]}\n")
         puzzle_part2(list(lines))
 
 
