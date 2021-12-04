@@ -1,0 +1,29 @@
+601 Lines read from Day4/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 - Play bingo with a squid
+
+We have a winner!  -- board number 29
+ 15 69  3 45 94
+  8 90 27 95 48
+ 37  9  2 74 59
+ 43 46 25 98 83
+ 68 73 24 31 72
+
+sum of unmarked squares = 859
+winning number          = 68
+score = 58412
+--------------------------------------------------------------------------------
+
+Part 2 - Let the giant squid win!
+
+We have the last winner!  -- board number 41
+ 33 77 59 37 42
+ 80 64 61 73 79
+ 15 41 58 45 93
+ 86  2 92 57 83
+ 20 24 17 13 23
+
+sum of unmarked squares = 170
+winning number          = 59
+score = 10030
