@@ -1,4 +1,4 @@
-# description required by test_all.py
+# description required by advent.py
 description = ("product of final horizontal position and final depth",       # part 1
                "product of final horizontal position and final depth"        # part 2        
               )
@@ -13,42 +13,10 @@ description = ("product of final horizontal position and final depth",       # p
 #   them up to be able to be executed in a batch with more puzzles.  You can ignore
 #   that.  
 
-def puzzle(input_file, part='both'):
-    """run part1 and part2 of the puzzle
-         parameters are the input file name, and a parameter that
-         can be 1 to execute only Part1, 2 to execute only Part2 or 'both' to execute both parts
-    """
-    
-    # read the input file
-    lines = advent.read_input(input_file)
-    
-    # convert each line into a list with a command and a number
-    for i, line in enumerate(lines):
-        line = line.rstrip()        # get rid of '\n' at the end of the line
-        line = line.split()         # split line into ['cmd', 'number']
-        line[1] = int(line[1])      # convert number to integer 
-        lines[i] = line             # replace the original line with the new list
-    
-    if part != 'both':
-        print('-'*80)
-    print(f"{len(lines)} Lines read from {input_file}")
-    print('-'*80)
 
-    if part == 1 or part == 'both':
-        print(f"\nPart 1 - {description[0]}")
-        puzzle_part1(list(lines))
-        
-    if part == 'both':
-        print('-'*80)
-    
-    if part == 2 or part == 'both':
-        print(f"\nPart 2 - {description[1]}")
-        puzzle_part2(list(lines))
-
-
-
-def puzzle_part1(commands):
+def puzzle_part1(lines):
     """run  part1 of puzzle"""
+    commands = prepare_input_list(lines)
     horizontal = 0
     depth = 0
     for cmd, val in commands:
@@ -66,8 +34,9 @@ def puzzle_part1(commands):
         
         
         
-def puzzle_part2(commands):
+def puzzle_part2(lines):
     """run part2 of puzzle"""
+    commands = prepare_input_list(lines)
     horizontal = 0
     depth = 0
     aim = 0
@@ -86,9 +55,17 @@ def puzzle_part2(commands):
     print(f"product={horizontal * depth}")
     
 
+def prepare_input_list(lines):
+    # convert each line into a list with a command and a number
+    commands = []
+    for i, line in enumerate(lines):
+        line = line.rstrip()        # get rid of '\n' at the end of the line
+        line = line.split()         # split line into ['cmd', 'number']
+        line[1] = int(line[1])      # convert number to integer 
+        commands.append(line)       # replace the original line with the new list
+    return commands
+
 # import code common for all Advent puzzles
-#    advent.startup
-#    advent.read_input
 import advent 
 # pass module name, and package
 advent.startup(__name__, __package__)

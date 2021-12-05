@@ -1,4 +1,4 @@
-# description required by test_all.py
+# description required by advent.py
 description = ("",       # part 1
                ""        # part 2        
               )
@@ -13,44 +13,21 @@ description = ("",       # part 1
 #   them up to be able to be executed in a batch with more puzzles.  You can ignore
 #   that.  
 
-def puzzle(input_file, part='both'):
-    """run part1 and part2 of the puzzle
-         parameters are the input file name, and a parameter that
-         can be 1 to execute only Part1, 2 to execute only Part2 or 'both' to execute both parts
-    """
-    
-    lines = advent.read_input(input_file, prep_function=None)
-
-    if part != 'both':
-        print('-'*80)
-    print(f"{len(lines)} Lines read from {input_file}")
-    print('-'*80)
-
-    if part == 1 or part == 'both':
-        print(f"\nPart 1 - {description[0]}\n")
-        puzzle_part1(list(lines))
-        
-    if part == 'both':
-        print('-'*80)
-    
-    if part == 2 or part == 'both':
-        print(f"\nPart 2 - {description[1]}\n")
-        puzzle_part2(list(lines))
-
 
 
 def puzzle_part1(lines):
     """run  part1 of puzzle"""
     pass
     
+    
 def puzzle_part2(lines):
     """run part2 of puzzle"""
     pass
     
-
+def prepare_input_list(lines):
+    return list(lines)
+    
 # import code common for all Advent puzzles
-#    advent.startup
-#    advent.read_input
 import advent 
 # pass module name, and package
 advent.startup(__name__, __package__)

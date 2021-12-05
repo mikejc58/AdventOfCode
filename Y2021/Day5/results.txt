@@ -1,0 +1,47 @@
+500 Lines read from Day5/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 - Horizontal and Vertical lines overlap at how many points?
+max x,y = (989, 990)
+count of overlaps>1 = 6225
+--------------------------------------------------------------------------------
+
+Part 2 - Horizontal, Vertical and Diagonal lines this time
+max x,y = (989, 990)
+count of overlaps>1 = 22116
+
+
+
+10 Lines read from Day5/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 - Horizontal and Vertical lines overlap at how many points?
+max x,y = (9, 9)
+Grid:
+ . . . . . . . 1 . .
+ . . 1 . . . . 1 . .
+ . . 1 . . . . 1 . .
+ . . . . . . . 1 . .
+ . 1 1 2 1 1 1 2 1 1
+ . . . . . . . . . .
+ . . . . . . . . . .
+ . . . . . . . . . .
+ . . . . . . . . . .
+ 2 2 2 1 1 1 . . . .
+count of overlaps>1 = 5
+--------------------------------------------------------------------------------
+
+Part 2 - Horizontal, Vertical and Diagonal lines this time
+max x,y = (9, 9)
+Grid:
+ 1 . 1 . . . . 1 1 .
+ . 1 1 1 . . . 2 . .
+ . . 2 . 1 . 1 1 1 .
+ . . . 1 . 2 . 2 . .
+ . 1 1 2 3 1 3 2 1 1
+ . . . 1 . 2 . . . .
+ . . 1 . . . 1 . . .
+ . 1 . . . . . 1 . .
+ 1 . . . . . . . 1 .
+ 2 2 2 1 1 1 . . . .
+count of overlaps>1 = 12

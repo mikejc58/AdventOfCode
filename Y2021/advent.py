@@ -47,8 +47,10 @@ def startup(my_name, my_package):
             print("No input file found")
             exit()
         
+        
         # run the part1 and part2 puzzle code
-        sys.modules[my_name].puzzle(input_file, part='both')
+        # sys.modules[my_name].puzzle(input_file, part='both')
+        puzzle(input_file, part='both')
         
     else:
         # advent_puzzle was imported into test_all.py
@@ -61,6 +63,33 @@ def startup(my_name, my_package):
         main = sys.modules['__main__']          # get a reference to the test driver module
         myself = sys.modules[my_name]           # get a reference to this module
         main.mod_list.append([myself, my_package])  # add myself to the list of modules to be tested
+
+
+def puzzle(input_file, part='both'):
+    """run part1 and part2 of the puzzle
+         parameters are the input file name, and a parameter that
+         can be 1 to execute only Part1, 2 to execute only Part2 or 'both' to execute both parts
+    """
+    main = sys.modules['__main__']
+    
+    # read the input lines, convert them to integers and put them in a list of lines
+    lines = read_input(input_file)
+    
+    if part != 'both':
+        print('-'*80)
+    print(f"{len(lines)} Lines read from {input_file}")
+    print('-'*80)
+    
+    if part == 1 or part == 'both':
+        print(f"\nPart 1 - {main.description[0]}")
+        sys.modules['__main__'].puzzle_part1(list(lines))
+        
+    if part == 'both':
+        print('-'*80)
+    
+    if part == 2 or part == 'both':
+        print(f"\nPart 2 - {main.description[1]}")
+        sys.modules['__main__'].puzzle_part2(list(lines))
         
         
 # functions common to all puzzles
