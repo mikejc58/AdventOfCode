@@ -16,47 +16,27 @@ description = ("Play bingo with a squid",       # part 1
     
 def puzzle_part1(lines):
     """run part1 of puzzle"""
-    # the first line contains the sequence of numbers to be 'drawn' until a board gets 'bingo'
-    # strip the '\n' from the end of the line and split the string into a list of strings 
-    numbers_strs = lines.pop(0).rstrip().split(',')
-    # convert the list of strings into a list of numbers
-    drawn_numbers = [int(n) for n in numbers_strs]
     
-    # get the boards from the input lines
-    boards = get_boards(lines)
-
-    winning_board = None
-    # draw the numbers until we have a winning board
-    for number in drawn_numbers:
-        for n, board in enumerate(boards):
-            # apply the drawn number to each board
-            if apply_number_to_board(number, board):
-                # if the board included the drawn number, check if it wins
-                if is_winner(board):
-                    # this board is the winner
-                    winning_board = n
-                    print(f"We have a winner!  -- board number {n}")
-                    print_board(board)
-                    print_score(board, number)
-                    break
-        
-        # check if any board has won            
-        if winning_board is not None:
-            # don't draw any more numbers, we are done
-            break    
+    play_bingo(lines, return_first_win=True)
     
     
 def puzzle_part2(lines):
     """run  part2 of puzzle"""
+    
+    play_bingo(lines, return_first_win=False)
+
+
+def play_bingo(lines, return_first_win):
+    """play the bingo game"""
     numbers_strs = lines.pop(0).rstrip().split(',')
     drawn_numbers = [int(n) for n in numbers_strs]
     
     boards = get_boards(lines)
+    # number of boards that haven't won yet
+    boards_left = 1 if return_first_win else len(boards)
 
     winning_board = None
-    # number of boards that haven't won yet
-    boards_left = len(boards)
-    # draws the numbers until the last remaining board wins (after all others have won)
+    # draw the numbers until we find the winner
     for number in drawn_numbers:
         for n, board in enumerate(boards):
             # apply the drawn number to each board (board may be None which will always return False)
@@ -66,7 +46,7 @@ def puzzle_part2(lines):
                     if boards_left == 1:
                         # this is the last board to win
                         winning_board = n
-                        print(f"We have the last winner!  -- board number {n}")
+                        print(f"We have the winner!  -- board number {n}")
                         print_board(board)
                         print_score(board, number)
                         break
@@ -78,7 +58,7 @@ def puzzle_part2(lines):
                         
         if winning_board is not None:
             break    
-    
+
     
 def print_score(board, number):
     """print the final score"""
@@ -117,15 +97,14 @@ def is_winner(board):
 
 def apply_number_to_board(number, board):
     """apply the drawn number to a board"""
-    if board is None:
-        return False
-    for l, line in enumerate(board):
-        for v, val in enumerate(line):
-            if val == number:
-                # mark the square by adding 100 to the square
-                board[l][v] = val + 100
-                # this board had the drawn number, and thus has changed
-                return True
+    if board is not None:
+        for l, line in enumerate(board):
+            for v, val in enumerate(line):
+                if val == number:
+                    # mark the square by adding 100 to the square
+                    board[l][v] = val + 100
+                    # this board had the drawn number, and thus has changed
+                    return True
     # this board did not have the drawn number
     return False    
 

@@ -27,7 +27,6 @@ def puzzle_part2(lines):
     lines = prepare_input_list(lines)
     
     find_overlap(lines, include_diagonal=True)
-    pass
 
 
 def find_overlap(lines, include_diagonal):
@@ -49,12 +48,10 @@ def find_overlap(lines, include_diagonal):
         max_y = max(max_y, y0, y1)
     print(f"max x,y = ({max_x}, {max_y})")
     
-    # build a grid with counts of lines going through each point (start with 0 at each point)
-    grid = []
-    for y in range(max_y+1):
-        row = [0] * (max_x + 1)
-        grid.append(row)
-        
+    # build a grid with max_y rows and max_x columns.  Each point starts at zero and is incremented
+    # for each line that goes through the point.
+    grid = [[0 for _ in range(max_x+1)] for _ in range(max_y+1)]
+    
     # process the lines and add them to the grid    
     for line in lines:
         # validate each line (must be horizontal, vertical or optionally diagonal)    
@@ -62,29 +59,25 @@ def find_overlap(lines, include_diagonal):
         if xy_data:
             # it is a valid line to be added
             # get the information computed by is_valid
-            x0, x1, increment_x = xy_data[0]
-            y0, y1, increment_y = xy_data[1]
-            line_range = xy_data[2]
+            (x, increment_x), (y, increment_y), line_range = xy_data
             
-            # add each of the lines points to the grid
-            x = x0
-            y = y0
-            for i in range(line_range+1):
+            # add each of the lines' points to the grid
+            while line_range >= 0:
                 grid[y][x] += 1
                 x += increment_x
                 y += increment_y
+                line_range -= 1
                 
         # the line did not meet the criteria        
         else:
             continue
     
     # now count how many points on the grid had more than one line crossing it        
-    overlaps_greater_than_1 = 0
-    for y in range(max_y+1):
-        for x in range(max_x+1):
-            count = grid[y][x]
+    overlaps = 0
+    for row in grid:
+        for count in row:
             if count > 1:
-                overlaps_greater_than_1 += 1
+                overlaps += 1
             if show_grid:
                 if count:
                     print(f"{count:2d}", end='')
@@ -94,7 +87,7 @@ def find_overlap(lines, include_diagonal):
             print()
             
     # display the puzzle result
-    print(f"count of overlaps>1 = {overlaps_greater_than_1}")
+    print(f"count of overlaps>1 = {overlaps}")
 
     
 def prepare_input_list(lines):
@@ -129,6 +122,11 @@ def is_valid(line, include_diagonal=False):
     
     # compute the increment (-1, 0, or +1) for x and y
     # set the 'length' of the line
+    #  note: if range_x and range_y are both greater than zero
+    #        we set the line_range from range_y only.  This is
+    #        okay because: if both range_x and range_y are non-zero 
+    #        then they must be equal to each other in order for the
+    #        line to be considered valid.
     if range_x > 0:
         line_range = range_x
         increment_x = int(delta_x / range_x)
@@ -137,7 +135,7 @@ def is_valid(line, include_diagonal=False):
         increment_y = int(delta_y / range_y)
     
     # build the tuple to be returned to the caller
-    xy_data = ((x0, x1, increment_x), (y0, y1, increment_y), line_range)
+    xy_data = ((x0, increment_x), (y0, increment_y), line_range)
     
     # line is valid if range_x is 0 (vertical) or range_y is 0 (horizontal)
     #  or if including diagonals, if range_x is the same as range_y

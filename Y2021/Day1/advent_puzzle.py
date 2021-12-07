@@ -1,10 +1,8 @@
 # description required by advent.py
-"""This is doc line 1"""
-"""This is doc line 2"""
-description = ("count the number of times a depth measurement increases",       # part 1
-               "count the number of times the sum of measurements\n         \
-               in sliding windows increases"                                    # part 2        
+description = ("count depth increases",                                         # part 1
+               "count depth increases for three line sliding windows",          # part 2
               )
+
 
 # to run:
 #   put advent_puzzle.py and advent.py into a folder
@@ -20,41 +18,46 @@ description = ("count the number of times a depth measurement increases",       
 def puzzle_part1(lines):
     """run  part1 of puzzle"""
     
-    depths = prepare_input_list(lines)
+    # count increases in depth for each line (window_size=1)
+    increase_count = count_depth_increases(lines, window_size=1)
     
-    # number of times depth increased
-    increase_count = 0
-    
-    prev_depth = None
-    for depth in depths:
-        if prev_depth is not None and depth > prev_depth:
-            increase_count += 1
-        prev_depth = depth
-        
     print(f"\ndepth increased {increase_count} times\n")
 
 
 def puzzle_part2(lines):
     """run part2 of puzzle"""
     
-    depths = prepare_input_list(lines)
-    
-    # number of times depth increased in 3-measurement windows
-    increase_count = 0
-    
-    # first sum is for depths[0]+depths[1]+depths[2] (window A in the puzzle)
-    previous_sum = sum(depths[0:3])
-    
-    # loop for each of the following 3-element windows (window B through the end)
-    for i in range(4, len(depths)+1):
-        current_sum = sum(depths[i-3:i])
-        if current_sum > previous_sum:
-            increase_count += 1
-        previous_sum = current_sum
+    # count increases in depth for each window of size 3
+    increase_count = count_depth_increases(lines, window_size=3)
     
     print(f"\ndepth increased {increase_count} times\n")
 
+
+def count_depth_increases(lines, window_size):
+    """count depth increases for a window_size window"""
+    
+    # convert list of strings to a list of integers
+    depths = prepare_input_list(lines)
+    
+    # number of times depth increased in windows of size 'window_size'
+    increase_count = 0
+    
+    # first sum is for the first measurement window
+    previous_sum = sum(depths[0:window_size])
+    
+    # loop for each of the following windows
+    for i in range(window_size+1, len(depths)+1):
+        current_sum = sum(depths[i-window_size:i])
+        if current_sum > previous_sum:
+            increase_count += 1
+        previous_sum = current_sum
+        
+    return increase_count
+
+
 def prepare_input_list(lines):
+    """convert the lines to integers"""
+    
     return [int(line) for line in lines]
 
 # import code common for all Advent puzzles
