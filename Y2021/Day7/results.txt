@@ -1,0 +1,9 @@
+1 Lines read from Day7/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 - Minimize crab submarine fuel, fuel=steps
+minimum fuel position=361, fuel used=356922
+--------------------------------------------------------------------------------
+
+Part 2 - Minimize crab submarine fuel, fuel=(steps*(steps+1))/2
+minimum fuel position=490, fuel used=100347031
