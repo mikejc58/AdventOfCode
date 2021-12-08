@@ -1,0 +1,9 @@
+200 Lines read from Day8/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 - Count how many times digits 1, 4, 7, and 8 appear in the input signals
+count of outputs for 1, 4, 7, and 8  is  237
+--------------------------------------------------------------------------------
+
+Part 2 - Decode the scrambled signals and get the 4-digit values, sum them
+overall sum = 1009098
