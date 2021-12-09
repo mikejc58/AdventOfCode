@@ -1,0 +1,13 @@
+100 Lines read from Day9/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find all low points in the map and calculate the sum of the risk levels
+
+total risk is 585
+--------------------------------------------------------------------------------
+
+Part 2 -  Find the three biggest basins (around the low points)
+          and calculate the product of their sizes
+
+3 biggest basins are [98, 96, 88]
+product of biggesst 3 basin sizes is 827904

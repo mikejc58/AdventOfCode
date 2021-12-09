@@ -2,6 +2,11 @@
 import sys
 import os
 
+# ANSI control codes for highlighting marked and unmarked locations 
+NORMAL = '\x1b[0m'  # for everything except the grid's locations
+BRIGHT = '\x1b[1m'  # for 'marked' locations
+DIM =    '\x1b[2m'  # for 'unmarked' locations
+
 def startup(my_name, my_package):
     if my_package == None:
         my_file_prefix = ''
@@ -81,16 +86,25 @@ def puzzle(input_file, part='both'):
     print('-'*80)
     
     if part == 1 or part == 'both':
-        print(f"\nPart 1 - {main.description[0]}")
+        print_description(main.description[0], part=1)
         sys.modules['__main__'].puzzle_part1(list(lines))
         
     if part == 'both':
         print('-'*80)
     
     if part == 2 or part == 'both':
-        print(f"\nPart 2 - {main.description[1]}")
+        print_description(main.description[1], part=2)
         sys.modules['__main__'].puzzle_part2(list(lines))
-        
+
+
+def print_description(desc, part):
+    if type(desc) == str:
+        desc = (desc,)
+    hdr = f"\nPart {part} - "   
+    for dsc in desc:
+        print(f"{hdr:9s} {dsc}") 
+        hdr = ''
+    print()
         
 # functions common to all puzzles
 def read_input(file_name, prep_function=None):
