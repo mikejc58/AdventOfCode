@@ -1,0 +1,15 @@
+10 Lines read from Day1/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  count depth increases
+
+
+depth increased 7 times
+
+--------------------------------------------------------------------------------
+
+Part 2 -  count depth increases for three line sliding windows
+
+
+depth increased 5 times
+

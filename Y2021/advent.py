@@ -7,7 +7,7 @@ NORMAL = '\x1b[0m'  # for everything except the grid's locations
 BRIGHT = '\x1b[1m'  # for 'marked' locations
 DIM =    '\x1b[2m'  # for 'unmarked' locations
 
-def startup(my_name, my_package):
+def startup(my_name, my_package, obj=False):
     if my_package == None:
         my_file_prefix = ''
     else:
@@ -55,7 +55,7 @@ def startup(my_name, my_package):
         
         # run the part1 and part2 puzzle code
         # sys.modules[my_name].puzzle(input_file, part='both')
-        puzzle(input_file, part='both')
+        puzzle(input_file, part='both', obj=obj)
         
     else:
         # advent_puzzle was imported into test_all.py
@@ -70,7 +70,7 @@ def startup(my_name, my_package):
         main.mod_list.append([myself, my_package])  # add myself to the list of modules to be tested
 
 
-def puzzle(input_file, part='both'):
+def puzzle(input_file, part='both', obj=False):
     """run part1 and part2 of the puzzle
          parameters are the input file name, and a parameter that
          can be 1 to execute only Part1, 2 to execute only Part2 or 'both' to execute both parts
@@ -80,6 +80,9 @@ def puzzle(input_file, part='both'):
     # read the input lines, convert them to integers and put them in a list of lines
     lines = read_input(input_file)
     
+    if obj:
+        puzzle_object = sys.modules['__main__'].AdventPuzzle(lines)
+    
     if part != 'both':
         print('-'*80)
     print(f"{len(lines)} Lines read from {input_file}")
@@ -87,16 +90,22 @@ def puzzle(input_file, part='both'):
     
     if part == 1 or part == 'both':
         print_description(main.description[0], part=1)
-        sys.modules['__main__'].puzzle_part1(list(lines))
+        if obj:
+            puzzle_object.puzzle_part1()
+        else:
+            sys.modules['__main__'].puzzle_part1(list(lines))
         
     if part == 'both':
         print('-'*80)
     
     if part == 2 or part == 'both':
         print_description(main.description[1], part=2)
-        sys.modules['__main__'].puzzle_part2(list(lines))
-
-
+        if obj:
+            puzzle_object.puzzle_part2()
+        else:
+            sys.modules['__main__'].puzzle_part2(list(lines))
+        
+        
 def print_description(desc, part):
     if type(desc) == str:
         desc = (desc,)

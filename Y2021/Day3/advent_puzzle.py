@@ -77,6 +77,7 @@ def prepare_input_list(lines):
 
 def get_rating(report, num_bits, which):
     """calculate rating based on either least or most common bits"""
+    
     # set 'tie_goes_to' based on whether we are finding 'most' or 'least' common bit
     tie_goes_to = '1' if which == 'most common' else '0'
     
@@ -84,24 +85,20 @@ def get_rating(report, num_bits, which):
     # remove the lines which don't match the 'most common' or 'least common' criteria
     for bit_position in range(num_bits):
         # we will build a new report list with only the lines that meet the criteria
-        next_report = []
         common_bit = find_common_bit(report, bit_position, which, tie_goes_to)
-        # include only those lines that meet the criteria in the new list
-        for bit_line in report:
-            if bit_line[bit_position] == common_bit:
-                next_report.append(bit_line)
-        # set up for testing the next bit_position
-        report = next_report
+        report = [bit_line for bit_line in report if bit_line[bit_position] == common_bit]
+        
         # when there is only one line left in the report we are done
         if len(report) == 1:
             break
+            
     # convert the final report line to a binary string 
     rating_string = ''.join(report[0])
-    # convert the binary string to an integer using base-2 conversion
-    rating_decimal = int(rating_string, 2)
     
-    return rating_decimal
-            
+    # convert the binary string to an integer using base-2 conversion
+    return int(rating_string, 2)
+    
+
 def find_common_bit(report, bit_position, which, tie_goes_to):
     """find the most or least common bit in the given bit position"""
     report_line_count = len(report)

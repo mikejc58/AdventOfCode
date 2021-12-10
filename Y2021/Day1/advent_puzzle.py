@@ -33,6 +33,14 @@ def puzzle_part2(lines):
     print(f"\ndepth increased {increase_count} times\n")
 
 
+def depth_window(depths, window_size):
+    """generate window over depths"""
+    next_window_start = 0
+    last_window_start = len(depths) - window_size
+    while next_window_start <= last_window_start:
+        yield depths[next_window_start:next_window_start+window_size]
+        next_window_start += 1
+
 def count_depth_increases(lines, window_size):
     """count depth increases for a window_size window"""
     
@@ -42,16 +50,16 @@ def count_depth_increases(lines, window_size):
     # number of times depth increased in windows of size 'window_size'
     increase_count = 0
     
-    # first sum is for the first measurement window
-    previous_sum = sum(depths[0:window_size])
-    
-    # loop for each of the following windows
-    for i in range(window_size+1, len(depths)+1):
-        current_sum = sum(depths[i-window_size:i])
+    # first window doesn't count towards increase_count, so
+    # make sure it doesn't look like an increase
+    previous_sum = 99999999
+    # for each window, sum the depths and add to 'increase_count' if the sum is greater than previous
+    for window in depth_window(depths, window_size):
+        current_sum = sum(window)
         if current_sum > previous_sum:
             increase_count += 1
         previous_sum = current_sum
-        
+            
     return increase_count
 
 

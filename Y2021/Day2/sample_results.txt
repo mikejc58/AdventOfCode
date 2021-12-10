@@ -1,0 +1,13 @@
+6 Lines read from Day2/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  product of final horizontal position and final depth
+
+final horizontal position=15, final depth=10
+product=150
+--------------------------------------------------------------------------------
+
+Part 2 -  product of final horizontal position and final depth
+
+final horizontal position=15, final depth=60, aim=10
+product=900

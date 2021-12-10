@@ -1,0 +1,29 @@
+19 Lines read from Day4/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Play bingo with a squid
+
+We have the winner!  -- board number 2
+[1m 14[0m[1m 21[0m[1m 17[0m[1m 24[0m[1m  4[0m
+[2m 10[0m[2m 16[0m[2m 15[0m[1m  9[0m[2m 19[0m
+[2m 18[0m[2m  8[0m[1m 23[0m[2m 26[0m[2m 20[0m
+[2m 22[0m[1m 11[0m[2m 13[0m[2m  6[0m[1m  5[0m
+[1m  2[0m[1m  0[0m[2m 12[0m[2m  3[0m[1m  7[0m
+
+sum of unmarked squares = 188
+winning number          = 24
+score = 4512
+--------------------------------------------------------------------------------
+
+Part 2 -  Let the giant squid win!
+
+We have the winner!  -- board number 1
+[2m  3[0m[2m 15[0m[1m  0[0m[1m  2[0m[2m 22[0m
+[1m  9[0m[2m 18[0m[1m 13[0m[1m 17[0m[1m  5[0m
+[2m 19[0m[2m  8[0m[1m  7[0m[2m 25[0m[1m 23[0m
+[2m 20[0m[1m 11[0m[1m 10[0m[1m 24[0m[1m  4[0m
+[1m 14[0m[1m 21[0m[1m 16[0m[2m 12[0m[2m  6[0m
+
+sum of unmarked squares = 148
+winning number          = 13
+score = 1924

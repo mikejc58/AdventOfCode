@@ -1,0 +1,13 @@
+102 Lines read from Day10/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find corrupt lines and, for each, compute a syntax error score
+          Compute the total syntax error score for the file
+
+Syntax Error Score 367059
+--------------------------------------------------------------------------------
+
+Part 2 -  Find incomplete lines and, for each, compute a autocomplete score
+          Find the median autocomplete score for the file
+
+median index=25, median value=1952146692

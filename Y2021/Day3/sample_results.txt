@@ -1,0 +1,15 @@
+12 Lines read from Day3/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Calculate submarine power consumption
+
+gamma    10110          22
+epsilon  01001           9
+power_consumption             198
+--------------------------------------------------------------------------------
+
+Part 2 -  Calculate submarine life support rating
+
+oxygen generator rating        23
+co2 scrubber rating            10
+life support rating           230

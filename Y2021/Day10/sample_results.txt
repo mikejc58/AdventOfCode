@@ -1,0 +1,33 @@
+10 Lines read from Day10/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find corrupt lines and, for each, compute a syntax error score
+          Compute the total syntax error score for the file
+
+line:   2, character:  12 -- expected ], but found }
+  score  = 1197
+line:   4, character:   8 -- expected ], but found )
+  score  = 3
+line:   5, character:   7 -- expected ), but found ]
+  score  = 57
+line:   7, character:  10 -- expected >, but found )
+  score  = 3
+line:   8, character:  16 -- expected ], but found >
+  score  = 25137
+Syntax Error Score 26397
+--------------------------------------------------------------------------------
+
+Part 2 -  Find incomplete lines and, for each, compute a autocomplete score
+          Find the median autocomplete score for the file
+
+line:   0, required closing: }}]])})]
+  points = 288957
+line:   1, required closing: )}>]})
+  points = 5566
+line:   3, required closing: }}>}>))))
+  points = 1480781
+line:   6, required closing: ]]}}]}]}>
+  points = 995444
+line:   9, required closing: ])}>
+  points = 294
+median index=2, median value=288957

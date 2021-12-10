@@ -1,0 +1,11 @@
+1 Lines read from Day6/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Calculate Lanternfish after 80 days
+
+total fish after  80 days 5934
+--------------------------------------------------------------------------------
+
+Part 2 -  Calculate Lanternfish after 256 days
+
+total fish after 256 days 26984457539
