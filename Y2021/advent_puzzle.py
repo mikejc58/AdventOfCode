@@ -14,21 +14,27 @@ description = ("",       # part 1
 #   that.  
 
 
+class AdventPuzzle():
+    def __init__(self, lines):
+        """initialize the AdventPuzzle object"""
+        self.grid = self.prepare_input_list(lines)
 
-def puzzle_part1(lines):
-    """run  part1 of puzzle"""
-    pass
+
+    def puzzle_part1(self):
+        """run  part1 of puzzle"""
+        pass
+        
     
-    
-def puzzle_part2(lines):
-    """run part2 of puzzle"""
-    pass
-    
-def prepare_input_list(lines):
-    return list(lines)
+    def puzzle_part2(self):
+        """run part2 of puzzle"""
+        pass
+        
+    def prepare_input_list(self, lines):
+        """create a list of the input"""
+        return lines
     
 # import code common for all Advent puzzles
 import advent 
 # pass module name, and package
-advent.startup(__name__, __package__)
+advent.startup(__name__, __package__, obj=True)
 

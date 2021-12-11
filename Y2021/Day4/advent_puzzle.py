@@ -1,6 +1,8 @@
 # description required by advent.py
-description = ("Play bingo with a squid",       # part 1
-               "Let the giant squid win!"        # part 2        
+description = (("Play bingo with a squid",                          # part 1
+                "Pick the board which will win to beat the squid"),
+               ("Let the giant squid win!",                         # part 2    
+                "Pick the board which will come in last, to lose")    
               )
 
 # to run:
@@ -111,6 +113,7 @@ def apply_number_to_board(number, board):
 
 def get_boards(lines):
     """get the boards from the input lines"""
+    
     # remove initial blank line
     lines.pop(0)
     
@@ -141,11 +144,13 @@ def new_board(lines):
         board.append(line)
     return board
 
+
 # ANSI control codes for highlighting marked and unmarked squares 
 NORMAL = '\x1b[0m'  # for everything except the board's squares
 BRIGHT = '\x1b[1m'  # for 'marked' squares
 DIM =    '\x1b[2m'  # for 'unmarked' squares
- 
+
+
 def print_board(board):
     """print a board"""
     for line in board:

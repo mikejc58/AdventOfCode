@@ -1,28 +1,30 @@
 601 Lines read from Day4/input.txt
 --------------------------------------------------------------------------------
 
-Part 1 - Play bingo with a squid
+Part 1 -  Play bingo with a squid
+          Pick the board which will win to beat the squid
 
-We have a winner!  -- board number 29
- 15 69  3 45 94
-  8 90 27 95 48
- 37  9  2 74 59
- 43 46 25 98 83
- 68 73 24 31 72
+We have the winner!  -- board number 29
+[1m 15[0m[2m 69[0m[2m  3[0m[2m 45[0m[2m 94[0m
+[1m  8[0m[2m 90[0m[1m 27[0m[2m 95[0m[2m 48[0m
+[1m 37[0m[2m  9[0m[2m  2[0m[2m 74[0m[2m 59[0m
+[1m 43[0m[2m 46[0m[1m 25[0m[2m 98[0m[1m 83[0m
+[1m 68[0m[1m 73[0m[2m 24[0m[2m 31[0m[2m 72[0m
 
 sum of unmarked squares = 859
 winning number          = 68
 score = 58412
 --------------------------------------------------------------------------------
 
-Part 2 - Let the giant squid win!
+Part 2 -  Let the giant squid win!
+          Pick the board which will come in last, to lose
 
-We have the last winner!  -- board number 41
- 33 77 59 37 42
- 80 64 61 73 79
- 15 41 58 45 93
- 86  2 92 57 83
- 20 24 17 13 23
+We have the winner!  -- board number 41
+[1m 33[0m[1m 77[0m[1m 59[0m[1m 37[0m[1m 42[0m
+[2m 80[0m[1m 64[0m[1m 61[0m[1m 73[0m[1m 79[0m
+[1m 15[0m[1m 41[0m[1m 58[0m[2m 45[0m[1m 93[0m
+[1m 86[0m[2m  2[0m[1m 92[0m[1m 57[0m[1m 83[0m
+[2m 20[0m[1m 24[0m[1m 17[0m[1m 13[0m[2m 23[0m
 
 sum of unmarked squares = 170
 winning number          = 59
