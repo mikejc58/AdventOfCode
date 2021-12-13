@@ -1,0 +1,39 @@
+
+Input caves and connections
+
+cave: start  -   A,b
+cave: A      -   c,b,end
+cave: c      -   A
+cave: b      -   A,d,end
+cave: d      -   b
+cave: end    -   A,b
+
+7 Lines read from Day12/sample1.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find all possible paths through the caves
+          which may use small (lowercase) caves no more than once
+
+    10 paths found:
+
+  start,A,c,A,b,A,end
+  start,A,c,A,b,end
+  start,A,c,A,end
+  start,A,b,A,c,A,end
+  start,A,b,A,end
+  start,A,b,end
+  start,A,end
+  start,b,A,c,A,end
+  start,b,A,end
+  start,b,end
+
+--------------------------------------------------------------------------------
+
+Part 2 -  Find all possible paths through the caves
+          which may use exactly one small cave twice
+
+     6 paths found which use c twice
+    20 paths found which use b twice
+     0 paths found which use d twice
+
+    36 total paths found

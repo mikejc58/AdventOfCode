@@ -1,0 +1,34 @@
+
+Input caves and connections
+
+cave: fs     -   end,he,DX,pj
+cave: end    -   fs,zg
+cave: he     -   DX,fs,pj,RW,WI,zg
+cave: DX     -   he,pj,fs
+cave: start  -   DX,pj,RW
+cave: pj     -   DX,zg,he,RW,fs
+cave: zg     -   end,sl,pj,RW,he
+cave: sl     -   zg
+cave: RW     -   he,pj,zg
+cave: WI     -   he
+
+18 Lines read from Day12/sample3.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find all possible paths through the caves
+          which may use small (lowercase) caves no more than once
+
+   226 paths found:
+
+--------------------------------------------------------------------------------
+
+Part 2 -  Find all possible paths through the caves
+          which may use exactly one small cave twice
+
+   353 paths found which use fs twice
+  1220 paths found which use he twice
+  1172 paths found which use pj twice
+   538 paths found which use zg twice
+     0 paths found which use sl twice
+
+  3509 total paths found

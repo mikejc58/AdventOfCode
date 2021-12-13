@@ -1,0 +1,49 @@
+
+Input caves and connections
+
+cave: dc     -   end,HN,LN,kj
+cave: end    -   dc,HN
+cave: start  -   HN,kj,dc
+cave: HN     -   dc,end,kj
+cave: LN     -   dc
+cave: kj     -   sa,HN,dc
+cave: sa     -   kj
+
+10 Lines read from Day12/sample2.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find all possible paths through the caves
+          which may use small (lowercase) caves no more than once
+
+    19 paths found:
+
+  start,HN,dc,end
+  start,HN,dc,HN,end
+  start,HN,dc,HN,kj,HN,end
+  start,HN,dc,kj,HN,end
+  start,HN,end
+  start,HN,kj,HN,dc,end
+  start,HN,kj,HN,dc,HN,end
+  start,HN,kj,HN,end
+  start,HN,kj,dc,end
+  start,HN,kj,dc,HN,end
+  start,kj,HN,dc,end
+  start,kj,HN,dc,HN,end
+  start,kj,HN,end
+  start,kj,dc,end
+  start,kj,dc,HN,end
+  start,dc,end
+  start,dc,HN,end
+  start,dc,HN,kj,HN,end
+  start,dc,kj,HN,end
+
+--------------------------------------------------------------------------------
+
+Part 2 -  Find all possible paths through the caves
+          which may use exactly one small cave twice
+
+    48 paths found which use dc twice
+    36 paths found which use kj twice
+     0 paths found which use sa twice
+
+   103 total paths found

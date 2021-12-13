@@ -1,0 +1,38 @@
+
+Input caves and connections
+
+cave: xx     -   xh,cu,DR,ny
+cave: xh     -   xx,DR,cu
+cave: vx     -   qc,LO,AP,end
+cave: qc     -   vx,DR
+cave: cu     -   wf,DR,LO,xx,ny,xh
+cave: wf     -   cu
+cave: ny     -   LO,cu,DR,end,xx
+cave: LO     -   ny,vx,cu,end
+cave: DR     -   cu,qc,ny,xx,xh
+cave: start  -   xx,xh,DR
+cave: AP     -   vx
+cave: end    -   LO,vx,ny
+
+22 Lines read from Day12/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find all possible paths through the caves
+          which may use small (lowercase) caves no more than once
+
+  4167 paths found:
+
+--------------------------------------------------------------------------------
+
+Part 2 -  Find all possible paths through the caves
+          which may use exactly one small cave twice
+
+ 12838 paths found which use xx twice
+ 10126 paths found which use xh twice
+  7804 paths found which use vx twice
+  7651 paths found which use qc twice
+ 30710 paths found which use cu twice
+     0 paths found which use wf twice
+ 25145 paths found which use ny twice
+
+ 98441 total paths found
