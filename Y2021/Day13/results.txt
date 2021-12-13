@@ -1,0 +1,19 @@
+745 Lines read from Day13/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Interpret the user manual by folding
+          apply just the first fold and count the dots
+
+dot count after 1 fold = 621
+--------------------------------------------------------------------------------
+
+Part 2 -  Interpret the user manual by folding
+          apply all the folds and read the resulting code
+
+▆  ▆ ▆  ▆ ▆  ▆   ▆▆  ▆▆   ▆▆    ▆▆ ▆▆▆▆ 
+▆  ▆ ▆ ▆  ▆  ▆    ▆ ▆  ▆ ▆  ▆    ▆    ▆ 
+▆▆▆▆ ▆▆   ▆  ▆    ▆ ▆    ▆  ▆    ▆   ▆  
+▆  ▆ ▆ ▆  ▆  ▆    ▆ ▆ ▆▆ ▆▆▆▆    ▆  ▆   
+▆  ▆ ▆ ▆  ▆  ▆ ▆  ▆ ▆  ▆ ▆  ▆ ▆  ▆ ▆    
+▆  ▆ ▆  ▆  ▆▆   ▆▆   ▆▆▆ ▆  ▆  ▆▆  ▆▆▆▆ 
+
