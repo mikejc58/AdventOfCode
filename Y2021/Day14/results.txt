@@ -1,0 +1,45 @@
+102 Lines read from Day14/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Determine the difference between most common and least common element in the polymer
+          after 10 steps
+
+for a template of length 20, and 10 iterations, the result will be 19,457 elements
+
+after 10 steps
+ element counts:
+  element S:                 1,931
+  element P:                 2,368
+  element H:                   542
+  element V:                   557
+  element K:                 2,778
+  element B:                 1,376
+  element F:                 2,437
+  element N:                 2,686
+  element C:                 1,537
+  element O:                 3,245
+maximum count =              3,245
+minimum count =                542
+difference    =              2,703
+--------------------------------------------------------------------------------
+
+Part 2 -  Determine the difference between most common and least common element in the polymer
+          after 40 steps
+
+for a template of length 20, and 40 iterations, the result will be 20,890,720,927,745 elements
+
+after 40 steps:
+ element counts:
+  element S:     1,754,454,056,432
+  element P:     2,876,486,309,516
+  element H:       548,323,377,603
+  element V:       514,480,643,495
+  element K:     2,801,614,969,043
+  element B:     1,712,312,351,226
+  element F:     2,656,461,948,238
+  element N:     3,001,767,210,353
+  element C:     1,525,393,049,879
+  element O:     3,499,427,011,960
+maximum count =  3,499,427,011,960
+minimum count =    514,480,643,495
+difference    =  2,984,946,368,465
