@@ -1,0 +1,57 @@
+target is ((20, 30), (-10, -5))
+x_min=20, x_max=30
+y_min=-5, y_max=-10
+minimum x velocity to reach target area 6
+for a lob shot (high arcing shot)
+   maximum x velocity to reach target area 7
+   maximum y velocity to reach target area 0
+for a flat shot
+   maximum x velocity to reach target area 30
+   maximum y velocity to reach target area -10
+for part1, maximum steps for trajectory will be 1000
+1 Lines read from Day17/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  calculate probe trajectories to reach a target
+          determine maximum height achieved by a trajectory that hits the target
+
+x velocity =   6   max steps used    20,  paths 10
+x velocity =   7   max steps used    20,  paths 10
+overall max height 45
+max steps used 20
+max y velocity 9
+--------------------------------------------------------------------------------
+
+Part 2 -  calculate probe trajectories to reach a target
+          determine how many different trajectories can hit the target
+
+Using: (from part1)
+   maximum steps 20
+   maximum y velocity 9
+
+x velocity =   6   max steps used    20,  paths 10
+x velocity =   7   max steps used    20,  paths 11
+x velocity =   8   max steps used     5,  paths 4
+x velocity =   9   max steps used     4,  paths 3
+x velocity =  10   max steps used     3,  paths 2
+x velocity =  11   max steps used     3,  paths 4
+x velocity =  12   max steps used     2,  paths 3
+x velocity =  13   max steps used     2,  paths 3
+x velocity =  14   max steps used     2,  paths 3
+x velocity =  15   max steps used     2,  paths 3
+x velocity =  16   max steps used     0,  paths 0
+x velocity =  17   max steps used     0,  paths 0
+x velocity =  18   max steps used     0,  paths 0
+x velocity =  19   max steps used     0,  paths 0
+x velocity =  20   max steps used     1,  paths 6
+x velocity =  21   max steps used     1,  paths 6
+x velocity =  22   max steps used     1,  paths 6
+x velocity =  23   max steps used     1,  paths 6
+x velocity =  24   max steps used     1,  paths 6
+x velocity =  25   max steps used     1,  paths 6
+x velocity =  26   max steps used     1,  paths 6
+x velocity =  27   max steps used     1,  paths 6
+x velocity =  28   max steps used     1,  paths 6
+x velocity =  29   max steps used     1,  paths 6
+x velocity =  30   max steps used     1,  paths 6
+total paths 112

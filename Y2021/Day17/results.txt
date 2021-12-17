@@ -1,0 +1,140 @@
+target is ((57, 116), (-198, -148))
+x_min=57, x_max=116
+y_min=-148, y_max=-198
+minimum x velocity to reach target area 11
+for a lob shot (high arcing shot)
+   maximum x velocity to reach target area 14
+   maximum y velocity to reach target area 0
+for a flat shot
+   maximum x velocity to reach target area 116
+   maximum y velocity to reach target area -198
+for part1, maximum steps for trajectory will be 1000
+1 Lines read from Day17/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  calculate probe trajectories to reach a target
+          determine maximum height achieved by a trajectory that hits the target
+
+x velocity =  11   max steps used   396,  paths 141
+x velocity =  12   max steps used   396,  paths 141
+x velocity =  13   max steps used   396,  paths 141
+x velocity =  14   max steps used   396,  paths 141
+overall max height 19503
+max steps used 396
+max y velocity 197
+--------------------------------------------------------------------------------
+
+Part 2 -  calculate probe trajectories to reach a target
+          determine how many different trajectories can hit the target
+
+Using: (from part1)
+   maximum steps 396
+   maximum y velocity 197
+
+x velocity =  11   max steps used   396,  paths 162
+x velocity =  12   max steps used   396,  paths 171
+x velocity =  13   max steps used   396,  paths 171
+x velocity =  14   max steps used   396,  paths 178
+x velocity =  15   max steps used    12,  paths 31
+x velocity =  16   max steps used    10,  paths 38
+x velocity =  17   max steps used     8,  paths 34
+x velocity =  18   max steps used     8,  paths 34
+x velocity =  19   max steps used     7,  paths 30
+x velocity =  20   max steps used     6,  paths 43
+x velocity =  21   max steps used     6,  paths 43
+x velocity =  22   max steps used     5,  paths 38
+x velocity =  23   max steps used     5,  paths 38
+x velocity =  24   max steps used     5,  paths 38
+x velocity =  25   max steps used     5,  paths 38
+x velocity =  26   max steps used     4,  paths 30
+x velocity =  27   max steps used     4,  paths 30
+x velocity =  28   max steps used     4,  paths 30
+x velocity =  29   max steps used     4,  paths 55
+x velocity =  30   max steps used     4,  paths 55
+x velocity =  31   max steps used     3,  paths 42
+x velocity =  32   max steps used     3,  paths 42
+x velocity =  33   max steps used     3,  paths 42
+x velocity =  34   max steps used     3,  paths 42
+x velocity =  35   max steps used     3,  paths 42
+x velocity =  36   max steps used     3,  paths 42
+x velocity =  37   max steps used     3,  paths 42
+x velocity =  38   max steps used     3,  paths 42
+x velocity =  39   max steps used     3,  paths 42
+x velocity =  40   max steps used     2,  paths 25
+x velocity =  41   max steps used     2,  paths 25
+x velocity =  42   max steps used     2,  paths 25
+x velocity =  43   max steps used     2,  paths 25
+x velocity =  44   max steps used     2,  paths 25
+x velocity =  45   max steps used     2,  paths 25
+x velocity =  46   max steps used     2,  paths 25
+x velocity =  47   max steps used     2,  paths 25
+x velocity =  48   max steps used     2,  paths 25
+x velocity =  49   max steps used     2,  paths 25
+x velocity =  50   max steps used     2,  paths 25
+x velocity =  51   max steps used     2,  paths 25
+x velocity =  52   max steps used     2,  paths 25
+x velocity =  53   max steps used     2,  paths 25
+x velocity =  54   max steps used     2,  paths 25
+x velocity =  55   max steps used     2,  paths 25
+x velocity =  56   max steps used     2,  paths 25
+x velocity =  57   max steps used     2,  paths 76
+x velocity =  58   max steps used     2,  paths 76
+x velocity =  59   max steps used     1,  paths 51
+x velocity =  60   max steps used     1,  paths 51
+x velocity =  61   max steps used     1,  paths 51
+x velocity =  62   max steps used     1,  paths 51
+x velocity =  63   max steps used     1,  paths 51
+x velocity =  64   max steps used     1,  paths 51
+x velocity =  65   max steps used     1,  paths 51
+x velocity =  66   max steps used     1,  paths 51
+x velocity =  67   max steps used     1,  paths 51
+x velocity =  68   max steps used     1,  paths 51
+x velocity =  69   max steps used     1,  paths 51
+x velocity =  70   max steps used     1,  paths 51
+x velocity =  71   max steps used     1,  paths 51
+x velocity =  72   max steps used     1,  paths 51
+x velocity =  73   max steps used     1,  paths 51
+x velocity =  74   max steps used     1,  paths 51
+x velocity =  75   max steps used     1,  paths 51
+x velocity =  76   max steps used     1,  paths 51
+x velocity =  77   max steps used     1,  paths 51
+x velocity =  78   max steps used     1,  paths 51
+x velocity =  79   max steps used     1,  paths 51
+x velocity =  80   max steps used     1,  paths 51
+x velocity =  81   max steps used     1,  paths 51
+x velocity =  82   max steps used     1,  paths 51
+x velocity =  83   max steps used     1,  paths 51
+x velocity =  84   max steps used     1,  paths 51
+x velocity =  85   max steps used     1,  paths 51
+x velocity =  86   max steps used     1,  paths 51
+x velocity =  87   max steps used     1,  paths 51
+x velocity =  88   max steps used     1,  paths 51
+x velocity =  89   max steps used     1,  paths 51
+x velocity =  90   max steps used     1,  paths 51
+x velocity =  91   max steps used     1,  paths 51
+x velocity =  92   max steps used     1,  paths 51
+x velocity =  93   max steps used     1,  paths 51
+x velocity =  94   max steps used     1,  paths 51
+x velocity =  95   max steps used     1,  paths 51
+x velocity =  96   max steps used     1,  paths 51
+x velocity =  97   max steps used     1,  paths 51
+x velocity =  98   max steps used     1,  paths 51
+x velocity =  99   max steps used     1,  paths 51
+x velocity = 100   max steps used     1,  paths 51
+x velocity = 101   max steps used     1,  paths 51
+x velocity = 102   max steps used     1,  paths 51
+x velocity = 103   max steps used     1,  paths 51
+x velocity = 104   max steps used     1,  paths 51
+x velocity = 105   max steps used     1,  paths 51
+x velocity = 106   max steps used     1,  paths 51
+x velocity = 107   max steps used     1,  paths 51
+x velocity = 108   max steps used     1,  paths 51
+x velocity = 109   max steps used     1,  paths 51
+x velocity = 110   max steps used     1,  paths 51
+x velocity = 111   max steps used     1,  paths 51
+x velocity = 112   max steps used     1,  paths 51
+x velocity = 113   max steps used     1,  paths 51
+x velocity = 114   max steps used     1,  paths 51
+x velocity = 115   max steps used     1,  paths 51
+x velocity = 116   max steps used     1,  paths 51
+total paths 5200

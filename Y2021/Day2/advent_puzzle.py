@@ -56,14 +56,10 @@ def puzzle_part2(lines):
     
 
 def prepare_input_list(lines):
-    # convert each line into a list with a command and a number
-    commands = []
-    for i, line in enumerate(lines):
-        line = line.rstrip()        # get rid of '\n' at the end of the line
-        line = line.split()         # split line into ['cmd', 'number']
-        line[1] = int(line[1])      # convert number to integer 
-        commands.append(line)       # replace the original line with the new list
-    return commands
+    """convert each line into a list with a command and a number"""
+    
+    return [[cmd, int(number)] for (cmd, number) in (line.rstrip().split() for line in lines)]
+
 
 # import code common for all Advent puzzles
 import advent 

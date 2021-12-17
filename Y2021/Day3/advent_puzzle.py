@@ -22,21 +22,10 @@ def puzzle_part1(lines):
     # get the number of bits in each line
     num_bits = len(report[0])
     
-    # setup a list to count one bits for each column in the lines
-    ones = [0] * num_bits
-
-    # gamma will be a line which contains the bits that are the most common 
+    # gamma will be a line which contains the bit values that are the most common 
     # in each column of the input
-    gamma = []
-    for bit_num in range(num_bits):
-        # for each column, find the most common bit
-        bit = find_common_bit(report, bit_num, 'most common', tie_goes_to=None)
-        if bit is None:
-            # there were an equal number of ones and zeros
-            print(f"ambiguous result for bit number {bit_num}")
-            return
-        gamma.append(bit)
-
+    gamma = [find_common_bit(report, bit_num, 'most common', tie_goes_to=None) for bit_num in range(num_bits)]
+    
     gamma_string = ''.join(gamma)
     gamma_decimal = int(gamma_string, 2)
     print(f"gamma    {gamma_string}   {gamma_decimal:9d}")
@@ -101,20 +90,18 @@ def get_rating(report, num_bits, which):
 
 def find_common_bit(report, bit_position, which, tie_goes_to):
     """find the most or least common bit in the given bit position"""
-    report_line_count = len(report)
     ones = 0
     # look at each of the lines in the report and find the number of one bits
     # in the given bit position
     for bit_line in report:
-        if bit_line[bit_position] == '1':
-            ones += 1
-    zeros = report_line_count - ones
+        ones += (1 if bit_line[bit_position] == '1' else -1)
+        
     # based on whether we are finding the 'most common' or 'least common' bit in this position
     # return the result.  If the number of ones equals the number of zeros, return the
     # 'tie_goes_to' value
-    if ones > zeros:
+    if ones > 0:
         result = '1' if which == 'most common' else '0'
-    elif zeros > ones:
+    elif ones < 0:
         result = '0' if which == 'most common' else '1'
     else:
         result = tie_goes_to
