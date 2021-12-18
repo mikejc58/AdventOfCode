@@ -21,7 +21,6 @@ def puzzle_part1(lines):
     # create a list of all of the output digits
     outputs = []
     for line in lines:
-        _, line_outputs = line.split('|')
         outputs += line.split('|')[1].split()
     
     # create sum of outputs for each output length (length is the number of signals in each digit)

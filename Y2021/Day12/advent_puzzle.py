@@ -55,7 +55,7 @@ class AdventPuzzle():
         
         total_count = self.part1_count
         
-        # for each small cave, find the paths in which use that cave exactly twice
+        # for each small cave, find the paths which use that cave exactly twice
         for small_cave in self.small_caves:
             self.paths = []
             

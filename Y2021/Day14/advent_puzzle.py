@@ -165,6 +165,7 @@ class AdventPuzzle():
             
     def rule_index(self, pair):
         """get the index of a rule, given its pair of elements"""
+        # assumes there will be a rule for every possible pair
         for i, rule in enumerate(self.rules1):
             if rule[0] == pair:
                 return i

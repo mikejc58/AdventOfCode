@@ -1,0 +1,15 @@
+10 Lines read from Day18/sample8.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Snailfish math homework
+          add up the input 'numbers' using snailfish rules
+
+ magnitude = 4140
+--------------------------------------------------------------------------------
+
+Part 2 -  Snailfish math homework
+          find the two 'numbers' in the input that give the largest magnitude when added
+
+  [[2,[[7,7],7]],[[5,8],[[9,3],[0,2]]]]
++ [[[0,[5,8]],[[1,7],[9,6]]],[[4,[1,2]],[[1,4],2]]]
+ magnitude = 3993
