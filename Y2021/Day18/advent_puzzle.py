@@ -15,10 +15,14 @@ description = (("Snailfish math homework",       # part 1
 #   them up to be able to be executed in a batch with more puzzles.  You can ignore
 #   that.  
 
-class ParseError(Exception):
-    pass
+# class ParseError(Exception):
+    # pass
 
 class AdventPuzzle():
+
+    class ParseError(Exception):
+        pass
+
     def __init__(self, lines):
         """initialize the AdventPuzzle object"""
         self.grid = self.prepare_input_list(lines)
@@ -62,12 +66,6 @@ class AdventPuzzle():
         print(f"+ {biggest_right}")
         print(f" magnitude = {biggest}")
 
-    @staticmethod
-    def is_simple_pair(line):
-        """see if this is a simple pair (ie. '3,4' not '[x,y]' )"""
-        if line[0] == '[' or line[-1] == ']':
-            return False
-        return True
 
     def parse(self, line, depth):
         """parse a snailfish number into the left and right parts of the outermost pair"""
@@ -77,13 +75,13 @@ class AdventPuzzle():
         left_bracket = line[0]
         right_bracket = line[-1]
         if left_bracket != '[' or right_bracket != ']':
-            raise ParseError(line)
+            raise AdventPuzzle.ParseError("Missing left or right bracket -- " + line)
         # strip the starting and ending brackets to expose the pair
         line = line[1:-1]
         
         # it is a simple pair if all that is left is 'n,m'
-        simple_pair = True if AdventPuzzle.is_simple_pair(line) else False
-            
+        simple_pair = False if line[0] == '[' or line[-1] == ']' else True
+                    
         # find left and right of pair (the comma between them is at level 0)
         level = 0
         for i in range(len(line)):
@@ -96,7 +94,8 @@ class AdventPuzzle():
                 level -= 1
         else:
             # ill formed line, with no comma at level 0
-            raise ParseError(line)
+            raise AdventPuzzle.ParseError("No comma at level 0 - " + line)
+            
         left = line[:i]
         right = line[i+1:]
         
@@ -145,7 +144,7 @@ class AdventPuzzle():
                         break
                 else:
                     # there should be at least one '[' to the left of the number
-                    raise ParseError(left_part)
+                    raise AdventPuzzle.ParseError("Missing left bracket -- " + left_part)
                 break
         else:
             # no previous number found
@@ -176,7 +175,7 @@ class AdventPuzzle():
                         break
                 else:
                     # there should be at least one ']' to the right of the number
-                    raise ParseError(right_part)
+                    raise AdventPuzzle.ParseError("Missing right bracket -- " + right_part)
                 break
         else:
             # no next number found
@@ -188,6 +187,7 @@ class AdventPuzzle():
         
         return (True, line)
 
+
     def magnitude(self, line, depth):
         """recursively compute the 'magnitude' of a snailfish number"""
         left, right, simple_pair, depth = self.parse(line, depth)
@@ -197,7 +197,6 @@ class AdventPuzzle():
                     
         return (left_val * 3) + (right_val * 2)
         
-
 
     def explode(self, line, depth):
         """recursively scan for a pair that needs to be exploded"""
@@ -218,6 +217,7 @@ class AdventPuzzle():
             
         return (done, line)
 
+
     def split(self, line):
         """split any value in the snailfish number which is greater than 9 (two or more digits)"""
         for i in range(len(line)):
@@ -237,7 +237,7 @@ class AdventPuzzle():
                         break
                 else:
                     # failed to find end of number
-                    raise ParseError(line)
+                    raise AdventPuzzle.ParseError("Missing right bracket -- " + line)
 
         return (False, line)
 

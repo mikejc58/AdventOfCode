@@ -1,0 +1,14 @@
+137 Lines read from Day19/sample.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find which beacons are seen by multiple scanners
+          and determine how many unique beacons exist
+
+79 unique beacons found
+--------------------------------------------------------------------------------
+
+Part 2 -  Find the location and orientation of each scanner and beacon
+          determine the largest 'manhattan' distance between any two scanners
+
+Largest Manhattan distance between two scanners is 3621
+ for Scanner 2 and Scanner 3
