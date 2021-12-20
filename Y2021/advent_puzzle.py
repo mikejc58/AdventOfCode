@@ -1,6 +1,8 @@
 # description required by advent.py
-description = ("",       # part 1
-               ""        # part 2        
+description = (("",        # part 1
+                ""),
+               ("",        # part 2       
+                "") 
               )
 
 # to run:
@@ -22,12 +24,12 @@ class AdventPuzzle():
 
     def puzzle_part1(self):
         """run  part1 of puzzle"""
-        pass
+        
         
     
     def puzzle_part2(self):
         """run part2 of puzzle"""
-        pass
+        
         
     def prepare_input_list(self, lines):
         """create a list of the input"""
