@@ -1,0 +1,22 @@
+2 Lines read from Day21/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Play a dice rolling game with a 'deterministic' die 
+          Get the product of the losing player's score and the number of times the die was rolled
+
+Player  1  position 10  score 1006
+Player  2  position  7  score  907
+
+roll count is  999
+loser score is 907
+
+product is 906093
+--------------------------------------------------------------------------------
+
+Part 2 -  Play the game with a 'dirac' die, which splits the universe into three on every roll
+          For the player with the most wins, find the number of universes in which that player won
+
+Player 1 wins in      274291038026362 universes
+Player 2 wins in      135620348907779 universes
+
+CacheInfo(hits=442925, misses=24365, maxsize=None, currsize=24365)
