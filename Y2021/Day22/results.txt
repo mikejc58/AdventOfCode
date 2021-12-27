@@ -1,0 +1,15 @@
+420 Lines read from Day22/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Execute reactor reboot procedure, turning cubes on and off
+          but only for cubes with ranges within -50::50
+          After the procedure, how many cubes in the initialization area are on?
+
+total on = 580012
+--------------------------------------------------------------------------------
+
+Part 2 -  Execute reactor reboot procedure, turning cubes on and off
+          for all cubes in the input
+          After the procedure, how many cubes are on?
+
+total on = 1334238660555542

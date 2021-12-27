@@ -16,7 +16,7 @@ description = (("Enhance the image two times",        # part 1
 #   that.  
 
 to_binary_trans_table = str.maketrans('.#', '01')
-from_binary_trans_table = str.maketrans('01', '.#')
+from_binary_trans_table = str.maketrans('01', ' @')
 
 def to_binary(line):
     """translate '.' and '#' to '0' and '1' """

@@ -141,3 +141,15 @@ def split__words(line):
     """split a line into a list of words, removing punctuation"""
     line = [word.rstrip(',;:.? ') for word in line.split()]
     return line
+
+to_binary_trans_table = str.maketrans('.#', '01')
+from_binary_trans_table = str.maketrans('01', '.#')
+
+def to_binary(line):
+    """translate '.' and '#' to '0' and '1' """
+    return line.translate(to_binary_trans_table)
+    
+def from_binary(line):
+    """translate '0' and '1' to '.' and '#' """
+    return line.translate(from_binary_trans_table)
+
