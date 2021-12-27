@@ -1,0 +1,16 @@
+137 Lines read from Day25/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Move the seq cucumbers until they can't move any more
+          Determine how many steps go by before they can't move
+
+100 executed
+200 executed
+300 executed
+400 executed
+no movement after 489 steps
+--------------------------------------------------------------------------------
+
+Part 2 -  
+          
+
