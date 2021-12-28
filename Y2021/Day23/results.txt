@@ -1,0 +1,15 @@
+13 Lines read from Day23/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Find the cheapest set of moves to organize the amphipods
+          Each amphipod room holds two amphipods
+
+CacheInfo(hits=44538, misses=54168, maxsize=None, currsize=54168)
+lowest cost scheme is 14460
+--------------------------------------------------------------------------------
+
+Part 2 -  Find the cheapest set of moves to organize the amphipods
+          Each amphipod room holds four amphipods
+
+CacheInfo(hits=87661, misses=88990, maxsize=None, currsize=88990)
+lowest cost scheme is 41366
