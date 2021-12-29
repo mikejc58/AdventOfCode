@@ -1,0 +1,43 @@
+252 Lines read from Day24/input.txt
+--------------------------------------------------------------------------------
+
+Part 1 -  Run the MONAD algorithm to validate model numbers
+          find the largest valid model number
+
+store push (0,15)
+  store push (1,8)
+    store push (2,2)
+    check pop  (2,2) with -9
+    store push (4,13)
+      store push (5,4)
+        store push (6,1)
+        check pop  (6,1) with -5
+        store push (8,5)
+        check pop  (8,5) with -7
+      check pop  (5,4) with -12
+    check pop  (4,13) with -10
+  check pop  (1,8) with -1
+check pop  (0,15) with -11
+
+largest valid model number = 52926995971999
+--------------------------------------------------------------------------------
+
+Part 2 -  Run the MONAD algorithm to validate model numbers
+          find the smallest valid model number
+
+store push (0,15)
+  store push (1,8)
+    store push (2,2)
+    check pop  (2,2) with -9
+    store push (4,13)
+      store push (5,4)
+        store push (6,1)
+        check pop  (6,1) with -5
+        store push (8,5)
+        check pop  (8,5) with -7
+      check pop  (5,4) with -12
+    check pop  (4,13) with -10
+  check pop  (1,8) with -1
+check pop  (0,15) with -11
+
+smallest valid model number = 11811951311485
